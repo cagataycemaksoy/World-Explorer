@@ -24,6 +24,12 @@ struct CountryListView: View {
             }
             .tint(.black)
             .pickerStyle(.menu)
+            .onChange(of: selectedRegion) {
+              countryVM.region = selectedRegion.rawValue
+              Task {
+                await countryVM.getData()
+              }
+            }
           }
           .padding(.horizontal)
           List(countryVM.countries) { country in

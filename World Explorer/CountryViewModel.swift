@@ -11,11 +11,11 @@ import Foundation
 @Observable
 class CountryViewModel {
   var countries: [Country] = []
-  var urlString = "https://restcountries.com/v3.1/region/europe"
+  var urlString = "https://restcountries.com/v3.1/region/"
   var region = "europe"
   
   func getData() async {
-    guard let url = URL(string: urlString) else {
+    guard let url = URL(string: urlString + region) else {
       print("Failed to convert the string to URL.")
       return
     }
@@ -31,5 +31,6 @@ class CountryViewModel {
     }
     
     self.countries = countries
+    self.countries.sort { $0.name.common < $1.name.common }
   }
 }
