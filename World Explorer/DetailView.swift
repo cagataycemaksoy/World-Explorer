@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
   @State var country: Country
+  @State private var countryDetailVM = CountryDetailViewModel()
   
     var body: some View {
       VStack(alignment: .leading) {
@@ -19,13 +20,35 @@ struct DetailView: View {
         Rectangle()
           .fill(.gray)
           .frame(height: 1.5)
+        
+        HStack {
+          Text("Region: ")
+            .bold()
+          Text(countryDetailVM.countryDetail.subregion)
+        }
+        .padding(.bottom, 5)
+        
+        HStack(alignment: .top) {
+          Text("Capital: ")
+            .bold()
+          Text(capitalsString(countryDetailVM.countryDetail.capital))
+        }
         Spacer()
       }
+      .font(.title3)
       .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
       .padding(.horizontal)
+      .task {
+        countryDetailVM.countryName = country.name.common
+        await countryDetailVM.getData()
+      }
     }
+  
+  private func capitalsString(_ capitals: [String]) -> String {
+    capitals.joined(separator: ", ")
+  }
 }
 
 #Preview {
-    DetailView(country: Country(name: Name(common: "Turkey"), flag: "🇹🇷"))
+    DetailView(country: Country(name: Name(common: "South Africa"), flag: "🇹🇷"))
 }

@@ -11,11 +11,11 @@ import Foundation
 @Observable
 class CountryViewModel {
   var countries: [Country] = []
-  var urlString = "https://restcountries.com/v3.1/region/"
   var region = "europe"
+  let baseURL = "https://restcountries.com/v3.1/region/"
   
   func getData() async {
-    guard let url = URL(string: urlString + region) else {
+    guard let url = URL(string: baseURL + region) else {
       print("Failed to convert the string to URL.")
       return
     }

@@ -13,7 +13,7 @@ import Foundation
 class CountryDetailViewModel {
   var countryDetail = CountryDetail(subregion: "", capital: [], flags: CountryDetail.Flag(png: ""), coatOfArms: CountryDetail.CoatOfArm(png: ""))
   var countryName = "germany"
-  var baseURL = "https://restcountries.com/v3.1/name/"
+  let baseURL = "https://restcountries.com/v3.1/name/"
   
   func getData() async {
     guard let url = URL(string: baseURL + countryName.lowercased()) else {
