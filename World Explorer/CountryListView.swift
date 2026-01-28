@@ -33,11 +33,16 @@ struct CountryListView: View {
           }
           .padding(.horizontal)
           List(countryVM.countries) { country in
-            HStack {
-              Text(country.flag)
-              Text(country.name.common)
+            NavigationLink {
+              DetailView(country: country)
+            } label: {
+              HStack {
+                Text(country.flag)
+                Text(country.name.common)
+              }
+                .font(.title)
             }
-              .font(.title)
+
           }
           .listStyle(.plain)
         }
