@@ -6,17 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		759799D92F2B928700AADBFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759799CF2F2B928700AADBFC /* Assets.xcassets */; };
+		759799DA2F2B928700AADBFC /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759799D02F2B928700AADBFC /* Country.swift */; };
+		759799DB2F2B928700AADBFC /* CountryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759799D12F2B928700AADBFC /* CountryDetail.swift */; };
+		759799DC2F2B928700AADBFC /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759799D22F2B928700AADBFC /* CountryDetailViewModel.swift */; };
+		759799DD2F2B928700AADBFC /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759799D32F2B928700AADBFC /* CountryListView.swift */; };
+		759799DE2F2B928700AADBFC /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759799D42F2B928700AADBFC /* CountryViewModel.swift */; };
+		759799DF2F2B928700AADBFC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759799D52F2B928700AADBFC /* DetailView.swift */; };
+		759799E02F2B928700AADBFC /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759799D62F2B928700AADBFC /* Regions.swift */; };
+		759799E12F2B928700AADBFC /* World_ExplorerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759799D72F2B928700AADBFC /* World_ExplorerApp.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		759799772F28C5A100AADBFC /* World Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		759799CF2F2B928700AADBFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		759799D02F2B928700AADBFC /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		759799D12F2B928700AADBFC /* CountryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetail.swift; sourceTree = "<group>"; };
+		759799D22F2B928700AADBFC /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
+		759799D32F2B928700AADBFC /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
+		759799D42F2B928700AADBFC /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
+		759799D52F2B928700AADBFC /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		759799D62F2B928700AADBFC /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
+		759799D72F2B928700AADBFC /* World_ExplorerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World_ExplorerApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		759799792F28C5A100AADBFC /* World Explorer */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "World Explorer";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		759799742F28C5A100AADBFC /* Frameworks */ = {
@@ -32,7 +45,7 @@
 		7597996E2F28C5A100AADBFC = {
 			isa = PBXGroup;
 			children = (
-				759799792F28C5A100AADBFC /* World Explorer */,
+				759799D82F2B928700AADBFC /* World Explorer */,
 				759799782F28C5A100AADBFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +56,46 @@
 				759799772F28C5A100AADBFC /* World Explorer.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		759799D82F2B928700AADBFC /* World Explorer */ = {
+			isa = PBXGroup;
+			children = (
+				759799CF2F2B928700AADBFC /* Assets.xcassets */,
+				759799E22F2B929200AADBFC /* Models */,
+				759799E32F2B92BB00AADBFC /* View */,
+				759799E42F2B92FA00AADBFC /* ViewModel */,
+				759799D72F2B928700AADBFC /* World_ExplorerApp.swift */,
+			);
+			path = "World Explorer";
+			sourceTree = "<group>";
+		};
+		759799E22F2B929200AADBFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				759799D02F2B928700AADBFC /* Country.swift */,
+				759799D12F2B928700AADBFC /* CountryDetail.swift */,
+				759799D62F2B928700AADBFC /* Regions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		759799E32F2B92BB00AADBFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				759799D32F2B928700AADBFC /* CountryListView.swift */,
+				759799D52F2B928700AADBFC /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		759799E42F2B92FA00AADBFC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				759799D22F2B928700AADBFC /* CountryDetailViewModel.swift */,
+				759799D42F2B928700AADBFC /* CountryViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +112,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				759799792F28C5A100AADBFC /* World Explorer */,
 			);
 			name = "World Explorer";
 			packageProductDependencies = (
@@ -109,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759799D92F2B928700AADBFC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +170,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759799DA2F2B928700AADBFC /* Country.swift in Sources */,
+				759799DB2F2B928700AADBFC /* CountryDetail.swift in Sources */,
+				759799DC2F2B928700AADBFC /* CountryDetailViewModel.swift in Sources */,
+				759799DD2F2B928700AADBFC /* CountryListView.swift in Sources */,
+				759799DE2F2B928700AADBFC /* CountryViewModel.swift in Sources */,
+				759799DF2F2B928700AADBFC /* DetailView.swift in Sources */,
+				759799E02F2B928700AADBFC /* Regions.swift in Sources */,
+				759799E12F2B928700AADBFC /* World_ExplorerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
