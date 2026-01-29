@@ -33,7 +33,56 @@ struct DetailView: View {
             .bold()
           Text(capitalsString(countryDetailVM.countryDetail.capital))
         }
-        Spacer()
+        .padding(.bottom)
+        
+        Text("Flag: ")
+          .bold()
+        
+        AsyncImage(url: URL(string: countryDetailVM.countryDetail.flags.png)) { phase in
+          if let image = phase.image {
+            image
+              .resizable()
+              .scaledToFit()
+              .shadow(radius: 8)
+          } else if phase.error != nil {
+            Image(systemName: "questionmark.square.dashed")
+              .resizable()
+              .scaledToFit()
+              .shadow(radius: 8)
+          } else {
+            ProgressView()
+              .tint(.indigo)
+              .scaleEffect(4)
+            
+          }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        
+        if let coatOfArmImage = countryDetailVM.countryDetail.coatOfArms.png {
+          Text("Coat Of Arm: ")
+            .bold()
+            .padding(.top)
+          
+          AsyncImage(url: URL(string: coatOfArmImage)) { phase in
+            if let image = phase.image {
+              image
+                .resizable()
+                .scaledToFit()
+                .shadow(radius: 8)
+            } else if phase.error != nil {
+              Image(systemName: "questionmark.square.dashed")
+                .resizable()
+                .scaledToFit()
+                .shadow(radius: 8)
+            } else {
+              ProgressView()
+                .tint(.indigo)
+                .scaleEffect(4)
+            }
+          }
+          .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        }
+        
       }
       .font(.title3)
       .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
