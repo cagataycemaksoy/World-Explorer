@@ -42,7 +42,7 @@ struct OnboardingPageView: View {
             .padding(.bottom)
           
           Button(lastView ? "Explore!" : "Next") {
-            
+            buttonAction()
           }
           .tint(.color1)
           .buttonStyle(.bordered)

@@ -9,21 +9,35 @@ import SwiftUI
 
 struct OnboardingView: View {
   
+  @State private var selectedView = 0
+  
+  
     var body: some View {
-      TabView {
-        OnboardingPageView(title: "Welcome to \n World Explorer!", imageName: "img1", description: "Explore the world and more!", lastView: false, buttonAction: {})
+      TabView(selection: $selectedView) {
+        OnboardingPageView(title: "Welcome to \n World Explorer!", imageName: "img1", description: "Explore the world and more!", lastView: false, buttonAction: buttonAction)
+          .tag(0)
         
-        OnboardingPageView(title: "Countries and Details", imageName: "img2", description: "Search for countries in selected region and learn more about them.", lastView: false, buttonAction: {})
+        OnboardingPageView(title: "Countries and Details", imageName: "img2", description: "Search for countries in selected region and learn more about them.", lastView: false, buttonAction: buttonAction)
+          .tag(1)
         
-        OnboardingPageView(title: "Let's Start", imageName: "img3", description: "Let's explore the world together!", lastView: true, buttonAction: {})
+        OnboardingPageView(title: "Let's Start", imageName: "img3", description: "Let's explore the world together!", lastView: true, buttonAction: buttonAction)
+          .tag(2)
       }
       .ignoresSafeArea()
       .padding(.bottom)
       .tabViewStyle(.page(indexDisplayMode: .always))
       .indexViewStyle(.page(backgroundDisplayMode: .always))
     }
+  
+  func buttonAction() {
+    withAnimation {
+      if selectedView != 2 {
+        selectedView += 1
+      }
+    }
+  }
 }
 
 #Preview {
-    OnboardingView()
+  OnboardingView()
 }
