@@ -10,7 +10,7 @@ import SwiftUI
 struct OnboardingView: View {
   
   @State private var selectedView = 0
-  
+  @Binding var showOnboarding: Bool
   
     var body: some View {
       TabView(selection: $selectedView) {
@@ -33,11 +33,13 @@ struct OnboardingView: View {
     withAnimation {
       if selectedView != 2 {
         selectedView += 1
+      } else {
+        showOnboarding = false
       }
     }
   }
 }
 
 #Preview {
-  OnboardingView()
+  OnboardingView(showOnboarding: Binding.constant(true))
 }

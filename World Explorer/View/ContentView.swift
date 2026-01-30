@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+  @State private var showOnboarding = true
+  // @AppStorage("onboarding") var showOnboarding = true
     var body: some View {
       TabView {
         Tab("Explore", systemImage: "magnifyingglass") {
@@ -25,6 +27,9 @@ struct ContentView: View {
         }
       }
       .tint(.color1)
+      .fullScreenCover(isPresented: $showOnboarding) {
+        OnboardingView(showOnboarding: $showOnboarding)
+      }
       
     }
 }
