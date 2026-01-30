@@ -51,7 +51,7 @@ struct DetailView: View {
               .shadow(radius: 8)
           } else {
             ProgressView()
-              .tint(.indigo)
+              .tint(.color1)
               .scaleEffect(4)
             
           }
@@ -76,7 +76,7 @@ struct DetailView: View {
                 .shadow(radius: 8)
             } else {
               ProgressView()
-                .tint(.indigo)
+                .tint(.color1)
                 .scaleEffect(4)
             }
           }
