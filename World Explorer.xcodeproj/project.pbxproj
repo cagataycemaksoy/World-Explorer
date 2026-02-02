@@ -91,10 +91,9 @@
 		759799E32F2B92BB00AADBFC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				75CBFB872F314B1900C53C16 /* Onboarding */,
 				759799D32F2B928700AADBFC /* CountryListView.swift */,
 				75979A042F2CDFA800AADBFC /* ContentView.swift */,
-				75979A082F2CEECB00AADBFC /* OnboardingPageView.swift */,
-				75979A0A2F2CEF1300AADBFC /* OnboardingView.swift */,
 				759799D52F2B928700AADBFC /* DetailView.swift */,
 				75979A062F2CE06500AADBFC /* SavedCountriesListView.swift */,
 			);
@@ -108,6 +107,15 @@
 				759799D42F2B928700AADBFC /* CountryViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		75CBFB872F314B1900C53C16 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				75979A082F2CEECB00AADBFC /* OnboardingPageView.swift */,
+				75979A0A2F2CEF1300AADBFC /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
